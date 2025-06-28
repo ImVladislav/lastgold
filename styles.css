@@ -17,7 +17,7 @@ body {
    justify-content: center;
    align-items: center;
    overflow-x: hidden;
-   cursor: url('/Cross.png') 10 10, auto;
+   cursor: url('/Cross.png') 150 150, auto;
    width: 100%;
    position: relative;
    /* overflow: hidden;  */
