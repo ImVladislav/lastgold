@@ -17,7 +17,7 @@ body {
    justify-content: center;
    align-items: center;
    overflow-x: hidden;
-   cursor: url('/Cross.png') 40 40, auto;
+   cursor: url('/Cross.png') 10 10, auto;
    width: 100%;
    position: relative;
    /* overflow: hidden;  */
@@ -51,7 +51,7 @@ a,
 button,
 div,
 .clickable {
-   cursor: url('/Cross.png') 40 40, pointer;
+   cursor: url('/Cross.png') 10 10, pointer;
 }
 .container {
    width: 100%;
