@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Gold Index</title>
+   <link rel="stylesheet" href="styles.css" />
+   <!-- Підключення CSS -->
+   <link rel="icon" href="200.png" type="image/png" />
+   <!-- Додавання фавіконки -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+   <div style="position: fixed; left: 0; top: 0; z-index: 0; width: 100%; height: 100%; overflow: hidden;">
+      <img style="width: 100%; height: 100%; object-fit: cover;"
+         src="/GoldBack.jpg"/>
+   </div>
+   <div class="container">
+      <div class="header">
+
+         <!-- <img src="ico7.png" alt="Logo" class="main-logo" /> -->
+         <div class="flex items-center justify-center">
+            <div class="svg-wrap">
+               <svg id="au-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508.6 508.6">
+                  <defs>
+                     <linearGradient id="goldGradient">
+                        <stop offset="0%" stop-color="#F5C21B" />
+                        <stop offset="100%" stop-color="#D17000" />
+                     </linearGradient>
+                  </defs>
+                  <path class="element-border" d="M10,498.7V10h488.7v488.7H10z" />
+                  <path class="element-name"
+                     d="M201.9,150.74,278,354.21H231.53L216.14,308.9H140.06l-16,45.31h-45L156,150.74Zm2.56,124.82L178.81,200.9h-.57l-26.5,74.66Z" />
+                  <path class="element-name"
+                     d="M391.12,354.21V333.69h-.85q-7.69,12.82-19.95,18.52a58.91,58.91,0,0,1-25.08,5.7q-16.24,0-26.64-4.27a38.41,38.41,0,0,1-16.39-12.11,47.35,47.35,0,0,1-8.41-19.09,118.63,118.63,0,0,1-2.42-24.94V206.88h40.47v83.21q0,18.24,5.7,27.21t20.23,9q16.52,0,23.94-9.83t7.41-32.34V206.88h40.47V354.21Z" />
+               </svg>
+            </div>
+         </div>
+         <img style="width: 50%;" src="/log.gif" />
+         </p>
+      </div>
+
+      <div class="progress-bar-container" style="width: 100%; position: relative; display: inline-block;">
+         <div class="progress-bar">
+            <div class="progress-text" id="progressText">
+               rhn1wThnygdPXNDerDGp8DvGpm7AvsPXk1VWGdPpump
+            </div>
+         </div>
+         <div id="copyMessage" class="copy-message">Contract copied!</div>
+      </div>
+
+
+      <div class="icons">
+         <a href="https://www.dextools.io/app/en/solana/pair-explorer/7xaJE3naKhSLnJsVm7Cj6XxQdVAqqNAt7gaVjVZbf5uc?t=1750457978173" target="_blank">
+            <img src="ico1.png" alt="Icon 1" />
+         </a>
+         <a href="https://dexscreener.com/solana/rhn1wThnygdPXNDerDGp8DvGpm7AvsPXk1VWGdPpump" target="_blank">
+            <img src="ico2.png" alt="Icon 2" />
+         </a>
+         <a href="https://t.me/GoldxInfo" target="_blank">
+            <img src="ico3.png" alt="Icon 4" />
+         </a>
+         <a href="https://x.com/GoldxInfo" target="_blank">
+            <img src="ico4.png" alt="Icon 5" />
+         </a>
+      </div>
+
+
+      <script src="./script.js"></script>
+
+      <script>
+         const progressText = document.getElementById('progressText');
+         const copyMessage = document.getElementById('copyMessage');
+
+         progressText.addEventListener('click', () => {
+            const textToCopy = progressText.textContent;
+
+            navigator.clipboard.writeText(textToCopy)
+               .then(() => {
+                  copyMessage.classList.add('show');
+
+                  setTimeout(() => {
+                     copyMessage.classList.remove('show');
+                  }, 2000);
+               })
+               .catch(err => {
+                  console.error('Failed to copy: ', err);
+               });
+         });
+      </script>
+
+      <!-- Remove scroll from second frame -->
+      <script>
+         setTimeout(() => {
+            const secondFrame = document.querySelector('.frame');
+            if (secondFrame) {
+               secondFrame.style.overflow = 'hidden';
+               const iframe = secondFrame.querySelector('iframe');
+               if (iframe) {
+                  iframe.style.overflow = 'hidden';
+                  iframe.style.border = 'none';
+               }
+            }
+         }, 2000);
+      </script>
+
+      <!-- Text Section Before Frame -->
+      <div class="text-section">
+         <h2 class="section-title">Gold Index</h2>
+         <div class="story-text">
+            <p>In 2001, over $1B in gold was stored beneath the World Trade Center.
+Then 9/11 happened — and the gold vanished.
+No audit. No footage. Just smoke, silence, and some early-moving trucks.
+
+They buried the truth. We tokenized it.
+
+Introducing Gold Index ($GOLDX) — a decentralized tribute to the greatest mystery never solved.
+Not backed by gold — it tracks what they lost.
+Meme-fueled, chain-secured, and powered by degens who remember.
+
+$GOLDX is the only index that audits the lie.</p>
+         </div>
+      </div>
+
+      <!-- TradingView Widget BEGIN -->
+      <div class="frame">
+         <div class="tradingview-widget-container">
+            <div id="tradingview_ogold"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+               new TradingView.widget({
+                  "width": "100%",
+                  "height": 500,
+                  "symbol": "CAPITALCOM:GOLD",
+                  "interval": "D",
+                  "timezone": "Etc/UTC",
+                  "theme": "dark",
+                  "style": "1",
+                  "locale": "en",
+                  "toolbar_bg": "#f1f3f6",
+                  "enable_publishing": false,
+                  "allow_symbol_change": true,
+                  "container_id": "tradingview_ogold"
+               });
+            </script>
+         </div>
+      </div>
+      <!-- TradingView Widget END -->
+<!-- TradingView Technical Analysis Widget -->
+<div class="frame">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+    {
+      "interval": "1D",
+      "width": "100%",
+      "isTransparent": false,
+      "height": "900",
+      "symbol": "OANDA:XAUUSD",
+      "showIntervalTabs": true,
+      "displayMode": "multiple", 
+      "colorTheme": "dark",
+      "locale": "en",
+      "isTransparent": true
+    }
+  </script>
+</div>
+</div>
+
+   </div>
+</body>
+</html>
